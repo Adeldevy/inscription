@@ -1,18 +1,30 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>inscription</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<?php $titrePage= "inscription"; ?>
+<?php require_once("includes/header.php"); ?>
     <div class="container">
         <div class="content">
             <h2 class="heading">S'INSCRIRE</h2>
+            <?php
+            if(isset($_POST['inscription'])){
+              $nom = $_POST['nom']; 
+              $prenom = $_POST['prenom'];
+              $pseudo =$_POST['pseudo']; 
+              $mail = $_POST['mail'];
+              $mdp1 = $_POST['mdp1'];  
+              $mdp2 = $_POST['mdp2'];  
+
+              echo "First Name: " . $nom . "<br>";
+              echo "Last Name: " . $prenom . "<br>";
+              echo "User Name: " . $pseudo. "<br>";
+              echo "User Email: " . $mail . "<br>";
+              echo "user pass: " . $mdp1 . "<br>";
+              echo "user confirm password: " . $mdp2 . "<br>";
+
+            }  
+            ?>
+
+
             <div class='notification'>Inscription réussie. Vérifiez votre e-mail pour le lien d'activation</div>
-            <form action="sign_up.php" method="POST">
+            <form action="inscription.php" method="POST">
                 <div class="input-box">
                     <input type="text" class="input-control" placeholder="Nom" name="nom" autocomplete="off" required>
                     <span class='error'>Error messages</span>
@@ -40,5 +52,4 @@
 
         </div>
     </div>
-</body>
-</html>
+    <?php require_once("includes/footer.php"); ?>

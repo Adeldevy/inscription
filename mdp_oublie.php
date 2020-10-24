@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RÉCUPÉRATION DE MOT DE PASSE</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <?php $titrePage= "mot de passe oublié"; ?>
+    <?php require_once("includes/header.php"); ?>
     <div class="container">
         <div class="content">
             <h2 class="heading">RÉCUPÉRATION DE MOT DE PASSE</h2>
@@ -25,5 +17,6 @@
             </form>
         </div>
     </div>
+    <?php require_once("includes/footer.php"); ?>
 </body>
 </html>
